@@ -1,0 +1,632 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+/*colのガーター変更*/
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto{
+  position: relative;
+  width: 100%;
+  padding-right: 0rem;
+  padding-left: 0rem;
+}
+/*colのガーター変更ここまで*/
+
+body {
+  line-height: 1.8;
+  letter-spacing: 0.18em;
+  font-family: 'Sawarabi Gothic', sans-serif;
+}
+
+/*スクロールバー*/
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+/*スクロールバーの軌道*/
+::-webkit-scrollbar-track {
+  background-color: rgba(247, 247, 247, 0.1);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+}
+
+/*スクロールバーの動く部分*/
+::-webkit-scrollbar-thumb {
+  background-color: rgba(15, 14, 10, 1);
+  box-shadow:0 0 0 1px rgba(255, 255, 255, 0);
+}
+/*スクロールバーここまで*/
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+  display:block;
+}
+
+ul {
+  list-style:none;
+}
+
+blockquote, q {
+  quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content:'';
+  content:none;
+}
+
+a {
+  margin:0;
+  padding-left:0.2rem;
+  vertical-align:baseline;
+  background:transparent;
+  text-decoration: none;
+  color: white;
+}
+a:hover{
+  background:transparent;
+  text-decoration: none;
+  color: #ffa501;
+  border-color: #ffa501;
+}
+.underline{
+  text-decoration: underline;
+}
+.underline:hover{
+  text-decoration: underline;
+}
+
+
+/* change colours to suit your needs */
+ins {
+  background-color:#ff9;
+  color:#000;
+  text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color:#ff9;
+  color:#000;
+  font-style:italic;
+  font-weight:bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom:1px dotted;
+  cursor:help;
+}
+
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display:block;
+  height:1px;
+  border:0;  
+  border-top:1px solid #cccccc;
+  margin:0 0;
+  padding:0;
+  border: 0;
+}
+
+/* form要素のcss全リセット */
+input,
+button,
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font: inherit;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  display: none;
+}
+
+input[type='submit'],
+input[type='button'],
+label,
+button,
+select {
+  cursor: pointer;
+}
+
+select::-ms-expand {
+  display: none;
+}
+/* form要素のcss全リセットここまで */
+/*リセットここまで*/
+
+/* font-size rem指定用に変換 */
+html {
+  /* ルートのフォントサイズを10pxに設定しておく */
+  font-size: 62.5%;
+}
+
+body {
+  /* ルートのフォントサイズを1.5em（15pxと同等のサイズ）に設定 */
+  font-size: 1.5em;
+}
+
+h1{
+  font-size: 2.0rem;
+  padding-bottom: 0.6rem;
+  padding-left: 0.3rem;
+}
+h2{
+  font-size: 1.8rem;
+  border-bottom: solid 1px white;
+  display:  inline-block;
+  padding-bottom: 0.6rem;
+  padding-left: 0.3rem;
+}
+h3{
+  font-size: 1.6rem;
+}
+h5{
+  font-size: 1.5rem;
+}
+a{
+  font-size: 1.8rem;
+}
+p{
+  font-size: 1.6rem;
+}
+.f-16{
+  font-size: 1.6rem;
+}
+.text-small{
+  font-size: 1.1rem;
+}
+/* font-size rem指定用に変換ここまで */
+
+/*パディングとマージン*/
+.mt-m10{
+  margin-top: -5rem;
+}
+.mt--10{
+  margin-top: -10rem;
+}
+.mt-6{
+  margin-top: 6rem;
+}
+.mt-7{
+  margin-top: 7rem;
+}
+.mt-8{
+  margin-top: 8rem;
+}
+.mb-6{
+  margin-bottom: 6rem;
+}
+.mb-7{
+  margin-bottom: 7rem;
+}
+.mb-8{
+  margin-bottom: 8rem;
+}
+.mb-10{
+  margin-bottom: 10rem;
+}
+.mb-15{
+  margin-bottom: 15rem;
+}
+.mt-10{
+  margin-top: 10rem;
+}
+.mtb-8{
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+.mtb-10{
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+.mtb-12{
+  margin-top: 12rem;
+  margin-bottom: 12rem;
+} 
+.mtb-15{
+  margin-top: 15rem;
+  margin-bottom: 15rem;
+}
+.pt-2-5{
+  padding-top: 2.5rem;
+}
+.pt-5-5{
+  padding-top: 4rem;
+}
+.pt-6{
+  padding-top: 6rem;
+}
+.pt-7{
+  padding-top: 7rem;
+}
+.pt-8{
+  padding-top: 8rem;
+}
+.pt-9{
+  padding-top: 9rem;
+}
+.pt-10{
+  padding-top: 10rem;
+}
+.pb-6{
+  padding-bottom: 5rem;
+}
+.pb-7{
+  padding-bottom: 7rem;
+}
+.pb-10{
+  padding-bottom: 10rem;
+}
+.pt-15{
+  padding-top: 15rem;
+}
+.pt-25{
+  padding-top: 25rem;
+}
+.pb-15{
+  padding-bottom: 15rem;
+}
+.ptb-6{
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+.ptb-7{
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+.ptb-10{
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+.ptb-12{
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+} 
+.ptb-15{
+  padding-top: 15rem;
+  padding-bottom: 15rem;
+}
+/*パディングとマージンここまで*/
+
+/*空間を作る*/
+.empty-space-3rem{
+  width: 100%;
+  height: 3rem;
+}
+.empty-space-0rem{
+  width: 100%;
+  height: 0rem;
+}
+/*空間を作るここｍで*/
+
+/*widthとheight*/
+.width-90{
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.interval{
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+@media (max-width: 1200px){
+  .width-90{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.interval{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+}
+.width-100{
+  width: 100%;
+}
+.height-100{
+  height: 100%;
+}
+/*widthとheightここまで*/
+
+/*line height*/
+.line-height-4{
+  line-height: 4;
+}
+/*line heightここまで*/
+
+/* イメージ要素をウィンドウサイズより大きくしない */
+img {
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+/* イメージ要素をウィンドウサイズより大きくしないここまで */
+
+/*要素を真ん中に*/
+.box-center{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/*要素を真ん中にここまで*/
+
+
+/*カラー*/
+.d-shadow{
+  filter: drop-shadow(0.25rem 0.25rem 0.5rem rgba(0, 11, 40, 1));
+}
+.d-shadow-white{
+  filter: drop-shadow(0.25rem 0.25rem 0.25rem rgba(255, 255, 255, 1));
+}
+.bg-white1{
+  background-color: white;
+}
+.bg-white2{
+  background-color: rgba(247, 247, 247, 1);
+}
+.bg-white3{
+  background-color: rgba(230, 230, 230, 1);
+}
+.bg-black{
+  background-color: rgba(15, 14, 10, 1);
+}
+.bg-gradation{
+  background: radial-gradient(#ffffff, #ffffff 50%, #f7f7f7);
+}
+.bg-picture{
+  background-image: url(../material/paper01.svg);
+  background-size: cover;
+}
+.clr-white{
+  color: rgba(247, 247, 247, 1) !important;
+}
+.clr-black{
+  color: rgba(15, 14, 10, 1);
+}
+.border-black{
+  border-bottom: solid 1px rgba(15, 14, 10, 1);
+}
+/*カラーここまで*/
+
+.d-flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+.none{
+  display: none;
+}
+.haikei{
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  filter: contrast(60%);
+}
+
+.relative{
+  position: relative;
+}
+.absolute-center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* headerここから */
+/* モバイル用 */
+header{
+  position: fixed;
+  z-index: 998;
+  width: 100%;
+  height: auto;
+  /* 背景色は任意に変更 */
+  background-color: rgba(15, 14, 10, 0.9);
+}
+.header-contents{
+  width: 95%;
+  height: 8.5vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+header .logo{
+  float: left;
+  /* 以下、画像を小さくしてヘッダーの上下真ん中に配置(消しても良い) */
+  height: 70%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+header .navigation{
+  float: right;
+  /* 以下、画像を小さくしてヘッダーの上下真ん中に配置(消しても良い) */
+  height: 40%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+nav{
+  /* ナビは初期非表示 */
+  display: none;
+  width: 100%;
+  position: fixed;
+  top: 8.5vh;
+  z-index:998;
+  /* 任意のナビゲーションカラー */
+  background-color: rgba(15, 14, 10, 0.9);
+}
+nav li{
+  border-bottom: solid 1px rgba(255, 255, 255, 0.3);
+}
+nav a{
+  display: block;
+  padding-left: 2rem;
+  color:white;
+}
+nav a:hover{
+}
+.nav-cover{
+  display: none;
+  position: fixed;
+  top: 8.5vh;
+  background-color: rgba(255, 255, 255, 0.2);
+  /* 画像を表示させたい時用 */
+  background-size: cover;
+  height:100vh;
+  width: 100%;
+  z-index:997;
+}
+/* モバイル用ここまで */
+
+/* PC用 */
+@media (min-width: 1024px){
+  header{
+    display: none;
+  }
+  .navigation{
+    display: none;
+  }
+  .header-contents{
+    height: auto;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 10% 5% 85%;
+  }
+  header .logo{
+    height: 70%;
+    /* position:absoluteにするとなぜがロゴがheader内に
+    収まる。header-contentsのheightはautoなので通常height:90%は
+    auto要素を参照できないはず。。。
+    今回同階層gridでナビ要素をmin-height:10vhとっている。
+    もしかしたらgridはナビのheight要素を参照しているのかも
+    結果オーライなんだけど */
+    position: absolute;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+  nav{
+    width: 100%;
+    min-height: 10vh;
+    position: static;
+    grid-row: 1 / 2;
+    grid-column: 3 / 4;
+    display: block;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  nav ul{
+    position: relative;
+    text-align: right;
+  }
+  nav ul li{
+    display: inline;
+    margin-right: 2rem;
+    border-bottom: none;
+  }
+  nav a{
+    display: inline;
+    font-size: 1.8rem;
+    padding-left: 0;
+  }
+  .box-center1{
+    display: none;
+  }
+  .box-center2{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@media (min-width: 1700px){
+  .box-center1{
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  nav ul{
+    text-align: right;
+  }
+  .box-center2{
+    display: none;
+  }
+}
+/* PC用ここまで */
+/* headerここまで */
+
+/*googlemap*/
+.gmap {
+height: 0;
+overflow: hidden;
+padding-bottom: 56.25%;
+position: relative;
+}
+.gmap iframe {
+position: absolute;
+left: 0;
+top: 0;
+height: 100%;
+width: 100%;
+}
+/*googlemapここまで*/
+
+
+/*新着情報*/
+.sinchaku-text{
+  width: 100%;
+  height: 15rem;
+}
+.container-fluid{
+  position: relative;
+  z-index: 99;
+}
+#card-reload{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#card-reload a{
+  font-size: 1.2rem;
+}
+/*新着情報ここまで*/
