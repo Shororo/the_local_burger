@@ -386,12 +386,16 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.box-top-center{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
 /*要素を真ん中にここまで*/
-
 
 /*カラー*/
 .d-shadow{
-  filter: drop-shadow(0.25rem 0.25rem 0.5rem rgba(0, 11, 40, 1));
+  filter: drop-shadow(0.25rem 0.25rem 0.1rem rgba(0, 0, 0, 1));
 }
 .d-shadow-white{
   filter: drop-shadow(0.25rem 0.25rem 0.25rem rgba(255, 255, 255, 1));
@@ -433,15 +437,6 @@ img {
 .none{
   display: none;
 }
-.haikei{
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -2;
-  filter: contrast(60%);
-}
-
 .relative{
   position: relative;
 }
@@ -622,7 +617,7 @@ width: 100%;
 }
 #card-reload{
   position: absolute;
-  top: 50%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
 }

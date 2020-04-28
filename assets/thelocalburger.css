@@ -57,7 +57,7 @@
   transform: translate(-50%, -50%);
   z-index: 99;
   width: 50rem;
-  filter: drop-shadow(0.25rem 0.25rem 0.3rem rgba(0, 0, 0, 1));
+  filter: drop-shadow(0.25rem 0.25rem 0.1rem rgba(0, 0, 0, 1));
 }
 
 .hole{
@@ -138,7 +138,7 @@
   height: 100vh;
   z-index: 998;
   /* 任意の色に変更 */
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 .shosai .shosai-contents{
   position: relative;
@@ -210,6 +210,9 @@
   .menu-card-picture {
     height: 20rem;
     width: 100%;
+  }
+  .text-small{
+    font-size: 1.3rem;
   }
 }
 
@@ -319,7 +322,7 @@
     margin-top: 4rem;
   }
   .size-576{
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
   .hole {
     width: 100%;
@@ -372,7 +375,7 @@
     transform: translate(-50%, -50%);
     z-index: 99;
     width: 30rem;
-    filter: drop-shadow(0.25rem 0.25rem 0.3rem rgba(0, 0, 0, 1));
+    filter: drop-shadow(0.25rem 0.25rem 0.1rem rgba(0, 0, 0, 1));
   }
 }
 
@@ -455,5 +458,11 @@ h1{
 .contents {
   height: 50%;
 }
+
+.sec-picture3 {
+    width: 100%;
+    height: 20rem;
+}
+
 }
 /* 全般ここまで 

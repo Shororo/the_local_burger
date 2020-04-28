@@ -113,14 +113,9 @@ $('.menu-card').hover(
 
 // 背景画像の入れ替え
 $(function () {
-  $('#change1').on('inview', function() {
-// 要素が画面に表示された時に実行する処理を記述
-  $('.title-picture').css('display','block');
-  });
-
   $('#change2').on('inview', function() {
 // 要素が画面に表示された時に実行する処理を記述
-  $('.title-picture').css('display','none');
+  $('.title-picture').attr('src', 'images/haikei.jpg');
   });
 });
 
@@ -197,5 +192,6 @@ window.onload = function() {
 
         $('#card-reload').one('click',function(){
           $(".sinchaku-item:first-of-type").addClass("active");
+          $("#card-reload").css("display","none");
         });
       };
