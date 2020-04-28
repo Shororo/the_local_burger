@@ -30,26 +30,8 @@ time, mark, audio, video {
 body {
   line-height: 1.8;
   letter-spacing: 0.18em;
-  font-family: 'Sawarabi Gothic', sans-serif;
+  font-family: 'Noto Serif JP', serif;
 }
-
-/*スクロールバー*/
-::-webkit-scrollbar {
-    width: 1rem;
-}
-
-/*スクロールバーの軌道*/
-::-webkit-scrollbar-track {
-  background-color: rgba(247, 247, 247, 0.1);
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
-}
-
-/*スクロールバーの動く部分*/
-::-webkit-scrollbar-thumb {
-  background-color: rgba(15, 14, 10, 1);
-  box-shadow:0 0 0 1px rgba(255, 255, 255, 0);
-}
-/*スクロールバーここまで*/
 
 article,aside,details,figcaption,figure,
 footer,header,hgroup,menu,nav,section {
@@ -81,16 +63,8 @@ a {
 a:hover{
   background:transparent;
   text-decoration: none;
-  color: #ffa501;
-  border-color: #ffa501;
+  color: #FD7013;
 }
-.underline{
-  text-decoration: underline;
-}
-.underline:hover{
-  text-decoration: underline;
-}
-
 
 /* change colours to suit your needs */
 ins {
@@ -182,12 +156,13 @@ body {
 }
 
 h1{
-  font-size: 2.0rem;
+  font-size: 2rem;
+  display:  inline-block;
   padding-bottom: 0.6rem;
   padding-left: 0.3rem;
 }
 h2{
-  font-size: 1.8rem;
+  font-size: 2rem;
   border-bottom: solid 1px white;
   display:  inline-block;
   padding-bottom: 0.6rem;
@@ -200,16 +175,10 @@ h5{
   font-size: 1.5rem;
 }
 a{
-  font-size: 1.8rem;
+  font-size: 2.0rem;
 }
 p{
   font-size: 1.6rem;
-}
-.f-16{
-  font-size: 1.6rem;
-}
-.text-small{
-  font-size: 1.1rem;
 }
 /* font-size rem指定用に変換ここまで */
 
@@ -217,17 +186,11 @@ p{
 .mt-m10{
   margin-top: -5rem;
 }
-.mt--10{
-  margin-top: -10rem;
-}
 .mt-6{
   margin-top: 6rem;
 }
 .mt-7{
   margin-top: 7rem;
-}
-.mt-8{
-  margin-top: 8rem;
 }
 .mb-6{
   margin-bottom: 6rem;
@@ -275,20 +238,8 @@ p{
 .pt-7{
   padding-top: 7rem;
 }
-.pt-8{
-  padding-top: 8rem;
-}
-.pt-9{
-  padding-top: 9rem;
-}
 .pt-10{
   padding-top: 10rem;
-}
-.pb-6{
-  padding-bottom: 5rem;
-}
-.pb-7{
-  padding-bottom: 7rem;
 }
 .pb-10{
   padding-bottom: 10rem;
@@ -296,15 +247,8 @@ p{
 .pt-15{
   padding-top: 15rem;
 }
-.pt-25{
-  padding-top: 25rem;
-}
 .pb-15{
   padding-bottom: 15rem;
-}
-.ptb-6{
-  padding-top: 6rem;
-  padding-bottom: 6rem;
 }
 .ptb-7{
   padding-top: 7rem;
@@ -324,37 +268,11 @@ p{
 }
 /*パディングとマージンここまで*/
 
-/*空間を作る*/
-.empty-space-3rem{
-  width: 100%;
-  height: 3rem;
-}
-.empty-space-0rem{
-  width: 100%;
-  height: 0rem;
-}
-/*空間を作るここｍで*/
-
 /*widthとheight*/
 .width-90{
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.interval{
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-@media (max-width: 1200px){
-  .width-90{
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-}
-.interval{
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
 }
 .width-100{
   width: 100%;
@@ -362,13 +280,32 @@ p{
 .height-100{
   height: 100%;
 }
-/*widthとheightここまで*/
 
-/*line height*/
-.line-height-4{
-  line-height: 4;
+#about-seiryuusou{
+  margin-top: -7rem;
+  padding-top: 7rem;
 }
-/*line heightここまで*/
+#onsen{
+  margin-top: -7rem;
+  padding-top: 7rem;
+}
+#oheya{
+  margin-top: -7rem;
+  padding-top: 7rem;
+}
+#oshokuzi{
+  margin-top: -7rem;
+  padding-top: 7rem;
+}
+#annai{
+  margin-top: -7rem;
+  padding-top: 7rem;
+}
+#kihon{
+  margin-top: -7rem;
+  padding-top: 7rem;
+}
+/*widthとheightここまで*/
 
 /* イメージ要素をウィンドウサイズより大きくしない */
 img {
@@ -379,50 +316,33 @@ img {
 }
 /* イメージ要素をウィンドウサイズより大きくしないここまで */
 
-/*要素を真ん中に*/
-.box-center{
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-/*要素を真ん中にここまで*/
-
-
 /*カラー*/
 .d-shadow{
-  filter: drop-shadow(0.25rem 0.25rem 0.5rem rgba(0, 11, 40, 1));
+  filter: drop-shadow(0.25rem 0.25rem 0.25rem rgba(0, 11, 40, 1));
 }
 .d-shadow-white{
   filter: drop-shadow(0.25rem 0.25rem 0.25rem rgba(255, 255, 255, 1));
 }
-.bg-white1{
-  background-color: white;
-}
-.bg-white2{
-  background-color: rgba(247, 247, 247, 1);
-}
-.bg-white3{
-  background-color: rgba(230, 230, 230, 1);
+.bg-white{
+  
 }
 .bg-black{
-  background-color: rgba(15, 14, 10, 1);
+  background-color: #091321;
 }
-.bg-gradation{
-  background: radial-gradient(#ffffff, #ffffff 50%, #f7f7f7);
+.bg-blue{
+  background-color: rgba(0, 11, 40, 1);
 }
-.bg-picture{
-  background-image: url(../material/paper01.svg);
-  background-size: cover;
+.bg-white-pro{
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 15%, rgba(255, 255, 255, 1) 100%);
+}
+.text-gray{
+  color: #222831;
 }
 .clr-white{
-  color: rgba(247, 247, 247, 1) !important;
+  color: white;
 }
-.clr-black{
-  color: rgba(15, 14, 10, 1);
-}
-.border-black{
-  border-bottom: solid 1px rgba(15, 14, 10, 1);
+.clr-blue{
+  color: rgba(0, 11, 40, 1);
 }
 /*カラーここまで*/
 
@@ -430,28 +350,14 @@ img {
   display: flex;
   flex-wrap: wrap;
 }
+.z-1{
+  position: relative;
+  z-index: 1;
+}
 .none{
   display: none;
 }
-.haikei{
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -2;
-  filter: contrast(60%);
-}
 
-.relative{
-  position: relative;
-}
-.absolute-center{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-}
 
 /* headerここから */
 /* モバイル用 */
@@ -461,26 +367,34 @@ header{
   width: 100%;
   height: auto;
   /* 背景色は任意に変更 */
-  background-color: rgba(15, 14, 10, 0.9);
+  background-color: rgba(0, 11, 40, 1);
+  filter: drop-shadow(0rem 0.25rem 0.25rem rgba(0,0,0,1));
 }
 .header-contents{
-  width: 95%;
-  height: 8.5vh;
+  width: 90%;
+  height: 7rem;
   margin-left: auto;
   margin-right: auto;
 }
 header .logo{
   float: left;
   /* 以下、画像を小さくしてヘッダーの上下真ん中に配置(消しても良い) */
-  height: 70%;
+  height: 45%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+header .yoyaku{
+  /* 以下、画像を小さくしてヘッダーの上下真ん中に配置(消しても良い) */
+  height: 100%;
+  margin-right: 1.5rem; 
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
 header .navigation{
-  float: right;
   /* 以下、画像を小さくしてヘッダーの上下真ん中に配置(消しても良い) */
-  height: 40%;
+  height: 45%;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -490,26 +404,28 @@ nav{
   display: none;
   width: 100%;
   position: fixed;
-  top: 8.5vh;
+  top: 7rem;
   z-index:998;
   /* 任意のナビゲーションカラー */
-  background-color: rgba(15, 14, 10, 0.9);
+  background-color: rgba(0, 11, 40, 0.9);
 }
 nav li{
-  border-bottom: solid 1px rgba(255, 255, 255, 0.3);
+  border-bottom: solid 7px rgba(255, 255, 255, 0);
 }
 nav a{
   display: block;
   padding-left: 2rem;
   color:white;
+  font-size: 2.5rem;
 }
 nav a:hover{
+  color: #ff9901;
 }
 .nav-cover{
   display: none;
   position: fixed;
-  top: 8.5vh;
-  background-color: rgba(255, 255, 255, 0.2);
+  top: 7rem;
+  background-color: rgba(0, 11, 40, 0.3);
   /* 画像を表示させたい時用 */
   background-size: cover;
   height:100vh;
@@ -519,21 +435,29 @@ nav a:hover{
 /* モバイル用ここまで */
 
 /* PC用 */
-@media (min-width: 1024px){
-  header{
-    display: none;
-  }
+@media (min-width: 1023px){
   .navigation{
     display: none;
+  }
+  #yoyaku-button{
+    display: none;
+  }
+  #yoyaku-button2{
+    display: block !important;
+    position: fixed;
+    z-index: 999;
+    bottom: 3rem;
+    right: 3rem;
+    width: 15rem;
   }
   .header-contents{
     height: auto;
     display: grid;
     grid-template-rows: 100%;
-    grid-template-columns: 10% 5% 85%;
+    grid-template-columns: 10% 20% 70%;
   }
   header .logo{
-    height: 70%;
+    height: 45%;
     /* position:absoluteにするとなぜがロゴがheader内に
     収まる。header-contentsのheightはautoなので通常height:90%は
     auto要素を参照できないはず。。。
@@ -555,78 +479,442 @@ nav a:hover{
   }
   nav ul{
     position: relative;
+    top: 50%;
+    transform: translateY(-50%);
     text-align: right;
   }
   nav ul li{
     display: inline;
-    margin-right: 2rem;
+    margin-left: 2rem;
     border-bottom: none;
   }
   nav a{
     display: inline;
-    font-size: 1.8rem;
+    font-size: 2rem;
     padding-left: 0;
   }
-  .box-center1{
-    display: none;
-  }
-  .box-center2{
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-  }
 }
-
-@media (min-width: 1700px){
-  .box-center1{
-    display: block;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  nav ul{
-    text-align: right;
-  }
-  .box-center2{
-    display: none;
-  }
+#about-seiryuusou{
+  margin-top: -0rem;
+  padding-top: 0rem;
+}
+#onsen{
+  margin-top: -0rem;
+  padding-top: 0rem;
+}
+#oheya{
+  margin-top: -0rem;
+  padding-top: 0rem;
+}
+#oshokuzi{
+  margin-top: -0rem;
+  padding-top: 0rem;
+}
+#annai{
+  margin-top: -0rem;
+  padding-top: 0rem;
+}
+#kihon{
+  margin-top: -0rem;
+  padding-top: 0rem;
 }
 /* PC用ここまで */
 /* headerここまで */
 
-/*googlemap*/
+
+/*トップページ*/
+#smooth_slider{
+  position: relative;
+  top: 0;
+  z-index: -2;
+}
+#title{
+  height: 100vh;
+  position: relative;
+}
+#title img{
+  position: absolute;
+  height: 45%;
+  top: 65%;
+  left: 20%;
+  transform: translate(-20%, -50%);
+}
+/*トップページここまで*/
+
+/*googleマップ*/
 .gmap {
-height: 0;
-overflow: hidden;
-padding-bottom: 56.25%;
-position: relative;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
 }
 .gmap iframe {
-position: absolute;
-left: 0;
-top: 0;
-height: 100%;
-width: 100%;
-}
-/*googlemapここまで*/
-
-
-/*新着情報*/
-.sinchaku-text{
-  width: 100%;
-  height: 15rem;
-}
-.container-fluid{
-  position: relative;
-  z-index: 99;
-}
-#card-reload{
   position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+/*googleマップここまで*/
+
+
+/*レスポンシブ*/
+@media (min-width: 639px){
+  #title img{
+    position: absolute;
+    height: 50%;
+    top: 70%;
+    left: 20%;
+    transform: translate(-20%, -70%);
+  }
+}
+
+@media (min-width: 767px){
+  /*パディングとマージン*/
+  .dmt-6{
+    margin-top: 6rem;
+  }
+  .dmt-7{
+    margin-top: 7rem;
+  }
+  .dmt-10{
+    margin-top: 10rem;
+  }
+  .dmtb-8{
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+  }
+  .dmtb-10{
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+  }
+  .dmtb-12{
+    margin-top: 12rem;
+    margin-bottom: 12rem;
+  } 
+  .dmtb-15{
+    margin-top: 15rem;
+    margin-bottom: 15rem;
+  }
+  .dpt-6{
+    padding-top: 6rem;
+  }
+  .dpt-7{
+    padding-top: 7rem;
+  }
+  .dpt-10{
+    padding-top: 10rem;
+  }
+  .dptb-7{
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+  .dptb-10{
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+  .dptb-12{
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  } 
+  .dptb-15 bg-black{
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+  }
+  /*パディングとマージンここまで*/
+}
+
+@media (min-width: 900px){
+  .width-90{
+    width: 900px;
+  }
+}
+/*レスポンシブここまで*/
+
+
+/*サイト全般*/
+#yoyaku-button2{
+  display: none;
+}
+.midasi1{
+  background-image: url("../images/toumorokosi02.jpg");
+  background-size: cover;
+  background-position: center center;
+  backdrop-filter: brightness(60%);
+  height: 20rem;
+}
+.midasi2{
+  background-image: url("../images/onsen01.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 20rem;
+}
+.midasi3{
+  background-image: url("../images/heya01.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 20rem;
+}
+.midasi4{
+  background-image: url("../images/shokuzi.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 20rem;
+}
+.midasi5{
+  background-image: url("../images/sisetu.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 20rem;
+}
+.midasi6{
+  background-image: url("../images/kawa.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 20rem;
+}
+.contena-blue{
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(110deg, rgba(0, 11, 40, 1) 30%, rgba(0, 0, 0, 0.3));
+}
+.contena-white{
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(110deg, rgba(255, 255, 255, 1) 30%, rgba(0, 0, 0, 0.3));
+}
+
+.midasi h1{
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#card-reload a{
-  font-size: 1.2rem;
+.button-center{
+  font-size: 2rem;
+  position: relative;
+  text-align: center;
 }
-/*新着情報ここまで*/
+.border-white{
+  border-bottom: solid 1px white;
+}
+.border-blue{
+  border-bottom: solid 1px rgba(0, 11, 40, 1);
+}
+/*サイト全般ここまで*/
+
+/*プロローグ*/
+.nozoki{
+  background-image: url("../images/genkan.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 50rem;
+}
+.contena-nozoki{
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.1) 30%, rgba(255, 255, 255, 0.1) 70%, rgba(255, 255, 255, 1));
+}
+/*プロローグここまで*/
+
+/*基本情報*/
+#kihon a{
+  font-size: 1.6rem;
+}
+/*基本情報ここまで*/
+
+/*グリッドピクチャーズ*/
+.grid-pictures img{
+  height: 20rem !important;
+  width: 100% !important;
+  padding: 0.7rem !important;
+}
+/*グリッドピクチャーズここまで*/
+
+/*温泉*/
+#onsen img{
+  height: 20rem;
+  width: 100%;
+}
+/*温泉ここまで*/
+
+/*Google Map*/
+.gmap {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+.gmap iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+/*Google Mapここまで*/
+
+/*フッター*/
+footer img{
+  height: 8rem;
+}
+footer a{
+  color: white;
+  font-size: 1.6rem;
+}
+footer a:hover{
+  color: #FD7013;
+}
+footer li{
+  line-height: 3;
+}
+hr{
+  border-top: 1px white solid;
+}
+/*フッターここまで*/
+
+/*セクチョンデザイン*/
+#about-seiryuusou, #onsen, #oshokuzi, #oheya, #annai, #kihon, #prologue{
+  position: relative;
+}
+.section-design{
+  position: absolute;
+  bottom: -6px;
+  left: 48%;
+  height: 10rem !important;
+  width: auto !important;
+  transform: translateX(-48%);
+}
+#section-design-onsen{
+  position: relative;
+  height: 15rem;
+  width: 100%;
+
+}
+#section-design-onsen img{
+  position: absolute;
+  height: 100% !important;
+  width: auto !important;
+  top: 0;
+  right: 0;
+
+}
+.squere{
+    height: 20rem !important;
+    width: auto !important;
+    display: block;
+    position: relative;
+    opacity: 0.2;
+    top: 8rem;
+    left: -8rem;
+    z-index: 10;
+}
+/*セクチョンデザインここまで*/
+
+/*レスポンシブ*/
+@media (min-width: 576px) {
+  #onsen img{
+    height: 23rem;
+    width: 100%;
+  }
+  /*グリッドピクチャーズ*/
+  .grid-pictures{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .grid-pictures img{
+    height: 30rem !important;
+    width: 100% !important;
+    padding: 1rem !important;
+  }
+  /*グリッドピクチャーズここまで*/
+}
+
+@media (min-width: 768px) {
+  /*グリッドピクチャーズ*/
+  #onsen .col-md-6{
+  padding-right: 1.7rem;
+  padding-left: 1.7rem;
+}
+.grid-pictures{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .grid-pictures img{
+    height: 32rem !important;
+    width: 100% !important;
+    padding: 1rem !important;
+  }
+  .box-center-768{
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .spacer-768{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    height: 5rem;
+  }
+  .spacer-768-big{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    height: 20rem;
+  }
+  /*グリッドピクチャーズここまで*/
+}
+@media (min-width: 825px){
+  .grid-pictures img{
+    height: 35rem !important;
+    width: 100% !important;
+    padding: 1rem !important;
+  }
+.grid-pictures{
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+/*セクションデザイン*/
+  #section-design-onsen{
+  position: relative;
+  height: 25rem;
+  width: 100%;
+}
+#section-design-onsen img{
+  position: absolute;
+  height: 100% !important;
+  width: auto !important;
+  top: 0;
+  right: 0;
+}
+/*セクチョンデザインここまで*/
+}
+@media (min-width: 900px){
+  .width-90{
+    width: 900px;
+  }
+  .grid-pictures{
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .grid-pictures img{
+    height: 35rem !important;
+    width: 100% !important;
+    padding: 1rem !important;
+  }
+  /*温泉*/
+  #onsen img{
+    height: 30rem;
+    width: 100%;
+  }
+  /*温泉ここまで*/
+}
+@media (min-width: 1200px){
+  .width-90{
+    width: 1100px;
+  }
+/*レスポンシブここまで*/
