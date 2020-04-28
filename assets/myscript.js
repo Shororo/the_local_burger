@@ -111,16 +111,6 @@ $('.menu-card').hover(
       );
 
 
-// 背景画像の入れ替え
-$(function () {
-  $('#change2').on('inview', function() {
-// 要素が画面に表示された時に実行する処理を記述
-  $('.title-picture').attr('src', 'images/haikei.jpg');
-  });
-});
-
-
-
 // instagram
 $(function () {
   try {
@@ -166,7 +156,7 @@ $(function () {
     });
 
 
-window.onload = function() {
+$(window).on('load', function() {
     //menu-cardクラスが付与されている要素をクリックすると
     //詳細画面が開き、画像やテキストが代入されます
     $(".menu-card").on("click", function(){ 
@@ -194,4 +184,11 @@ window.onload = function() {
           $(".sinchaku-item:first-of-type").addClass("active");
           $("#card-reload").css("display","none");
         });
-      };
+
+        // 背景画像の入れ替え
+        $('#change2').on('inview', function() {
+        // 要素が画面に表示された時に実行する処理を記述
+        $('.title-picture').attr('src', 'images/haikei.jpg');
+      });
+
+      });
