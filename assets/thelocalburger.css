@@ -380,6 +380,12 @@
 }
 
 @media (max-width: 576px){
+.none-mobile{
+  display: none;
+}
+.block-mobile{
+  display: block;
+}
  #sec123{
   margin-top: -10rem;
   padding-top: 10rem;
