@@ -1,3 +1,4 @@
+
 // ヘッダーの設定
 $(function(){
 
@@ -24,47 +25,68 @@ $(window).resize(function() {
   var devW = 1023;
   
   if (winW <= devW) {
-    //720px以下の時の処理  
+    //1023px以下の時の処理  
     $(document).on('click',function(e) {
      if(!$(e.target).closest('.navigation').length) {
      // ターゲット要素の外側をクリックした時の操作
      $("nav").slideUp();
      $(".nav-cover").slideUp();
+     $(".navigation").removeClass("bg-change");
    } else {
      // ターゲット要素をクリックした時の操作
      $("nav:not(:animated)").slideToggle();
      $(".nav-cover:not(:animated)").slideToggle();
+     $(".navigation").toggleClass("bg-change");
    }
  });
+
+
+    //スムーススクロール
+$(document).ready(function(){
+  //URLのハッシュ値を取得
+  var urlHash = location.hash;
+  //ハッシュ値があればページ内スクロール
+  if(urlHash) {
+    //スクロールを0に戻す
+    $('body,html').stop().scrollTop(0);
+    setTimeout(function () {
+      //ロード時の処理を待ち、時間差でスクロール実行
+      scrollToAnker(urlHash) ;
+    }, 100);
+  }
+  //通常のクリック時
+  $('a[href^="#"]').click(function() {
+    //ページ内リンク先を取得
+    var href= $(this).attr("href");
+    //リンク先が#か空だったらhtmlに
+    var hash = href == "#" || href == "" ? 'html' : href;
+    //スクロール実行
+    scrollToAnker(hash);
+    //リンク無効化
+    return false;
+  });
+
+  // 関数：スムーススクロール
+  // 指定したアンカー(#ID)へアニメーションでスクロール
+  function scrollToAnker(hash) {
+    $("nav").slideUp();
+    $(".nav-cover").slideUp();
+    $(".navigation").removeClass("bg-change");
+    var target = $(hash);
+    var position = target.offset().top;
+    $('body,html').stop().animate({scrollTop:position}, 500);
+  }
+});
+
 	//スマホ用navここまで
-	
+
+
+
 } else {
   //1023pxより大きい時の処理
   
   	//navをheaderの中に入れる
   	$("nav").insertAfter("#in-navigation");
-
-    //画面をクリックするとheaderが隠れる
-    // $(document).on('click',function() {
-    // 	$("header:not(:animated)").slideToggle();
-    // });
-
-		//上にスライドでheader出現
-		//下にスライドでheader隠れる
-		// var startPos = 0,winScrollTop = 0;
-  //   $(window).on('scroll',function(){
-  //     winScrollTop = $(this).scrollTop();
-  //     if (winScrollTop > startPos) {
-  //       $('header:not(:animated)').slideUp();
-  //     } else {
-  //       $('header:not(:animated)').slideDown();
-  //     }
-  //     startPos = winScrollTop;
-  //   });
-
-  //   $("footer ul li a").on('click',function() {
-  //     $("header:not(:animated)").slideDown();
-  //   });
 
 
   // タイトル画面が表示されている時はメニューバーを隠す
@@ -90,25 +112,47 @@ $(window).resize(function() {
     }
   });
 
+
+
+  //スムーススクロール
+$(document).ready(function(){
+  //URLのハッシュ値を取得
+  var urlHash = location.hash;
+  //ハッシュ値があればページ内スクロール
+  if(urlHash) {
+    //スクロールを0に戻す
+    $('body,html').stop().scrollTop(0);
+    setTimeout(function () {
+      //ロード時の処理を待ち、時間差でスクロール実行
+      scrollToAnker(urlHash) ;
+    }, 100);
+  }
+  //通常のクリック時
+  $('a[href^="#"]').click(function() {
+    //ページ内リンク先を取得
+    var href= $(this).attr("href");
+    //リンク先が#か空だったらhtmlに
+    var hash = href == "#" || href == "" ? 'html' : href;
+    //スクロール実行
+    scrollToAnker(hash);
+    //リンク無効化
+    return false;
+  });
+
+  // 関数：スムーススクロール
+  // 指定したアンカー(#ID)へアニメーションでスクロール
+  function scrollToAnker(hash) {
+    var target = $(hash);
+    var position = target.offset().top;
+    $('body,html').stop().animate({scrollTop:position}, 500);
+  }
+});
+
+
 }
 
 });
 
-
-// priceの色
-$('.menu-card').hover(
-  function() {
-
-        //マウスカーソルが重なった時の処理
-        $(this).find('.price').css('color','#bd7b00');
-      },
-      function() {
-
-        //マウスカーソルが離れた時の処理
-        $(this).find('.price').css('color','#ff3b00');
-
-      }
-      );
 
 
 // instagram
@@ -154,41 +198,3 @@ $(function () {
         alert(error);
       }
     });
-
-
-$(window).on('load', function() {
-    //menu-cardクラスが付与されている要素をクリックすると
-    //詳細画面が開き、画像やテキストが代入されます
-    $(".menu-card").on("click", function(){ 
-      $(".item-img").attr("src", $(this).find(".menu-card-picture").attr("src"));
-      $(".item-title").text($(this).find(".menu-name").text());
-      $(".item-mini").text($(this).find(".menu-mini").text());
-      $(".item-price").text($(this).find(".price").text());
-      $(".item-text").text($(this).find(".menu-explanation").text());
-      $(".shosai").css("display","block");
-      $(".shosai-out").css("display","block");
-    });
-    
-        //詳細画面外をクリックしたときに詳細画面を閉じます
-        $(".shosai-out").on("click",function() {
-          $(".shosai").css("display","none");
-          $(".shosai-out").css("display","none");
-        });
-
-        // ステップ3.「kasika」クラスのついた要素が画面上に入った場合、カルーセル発動に必要な「active」クラスを付与する
-        $('.kasika').one('inview', function() {
-          $(".sinchaku-item:first-of-type").addClass("active");
-        });
-
-        $('#card-reload').one('click',function(){
-          $(".sinchaku-item:first-of-type").addClass("active");
-          $("#card-reload").css("display","none");
-        });
-
-        // 背景画像の入れ替え
-        $('#change2').on('inview', function() {
-        // 要素が画面に表示された時に実行する処理を記述
-        $('.title-picture').attr('src', 'images/haikei.jpg');
-      });
-
-      });
