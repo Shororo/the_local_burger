@@ -433,6 +433,22 @@ img {
 .border-black{
   border-bottom: solid 1px rgba(15, 14, 10, 1);
 }
+
+.btn-flat-simple {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: rgba(15, 14, 10, 1);
+  background: #ECECEC;
+  transition: .4s;
+}
+
+.btn-flat-simple:hover {
+  background: #ffa501;
+  color: rgba(247, 247, 247, 1);
+}
 /*カラーここまで*/
 
 .d-flex{
