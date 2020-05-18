@@ -198,3 +198,14 @@ $(function () {
         alert(error);
       }
     });
+
+// ステップ3.kasikaクラスがinviewしたとき、もしくはcard-reloadのIDをクリックしたときに、お知らせがアクティブ！ 
+$(window).on('load', function() {
+  $('.kasika').on('inview', function(){
+    $('.sinchaku-item:first').addClass('active');
+  });
+
+    $('#card-reload').one('click', function(){
+    $('.sinchaku-item:first').addClass('active');
+  });
+});
