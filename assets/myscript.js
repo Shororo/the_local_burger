@@ -42,7 +42,7 @@ $(window).resize(function() {
 
 
     //スムーススクロール
-$(document).ready(function(){
+    $(document).ready(function(){
   //URLのハッシュ値を取得
   var urlHash = location.hash;
   //ハッシュ値があればページ内スクロール
@@ -54,16 +54,19 @@ $(document).ready(function(){
       scrollToAnker(urlHash) ;
     }, 100);
   }
-  //通常のクリック時
+  //a要素をクリックしたら
   $('a[href^="#"]').click(function() {
     //ページ内リンク先を取得
     var href= $(this).attr("href");
+    //スクロールしたくないa要素は以下のif文にハッシュを入力してスクロール実行を阻止しよう
+    if(href != '#carouselExampleControls'){
     //リンク先が#か空だったらhtmlに
     var hash = href == "#" || href == "" ? 'html' : href;
     //スクロール実行
     scrollToAnker(hash);
     //リンク無効化
     return false;
+  }
   });
 
   // 関数：スムーススクロール
@@ -115,7 +118,7 @@ $(document).ready(function(){
 
 
   //スムーススクロール
-$(document).ready(function(){
+  $(document).ready(function(){
   //URLのハッシュ値を取得
   var urlHash = location.hash;
   //ハッシュ値があればページ内スクロール
@@ -131,12 +134,15 @@ $(document).ready(function(){
   $('a[href^="#"]').click(function() {
     //ページ内リンク先を取得
     var href= $(this).attr("href");
+    //スクロールしたくないa要素は以下のif文にハッシュを入力してスクロール実行を阻止しよう
+    if(href != '#carouselExampleControls'){
     //リンク先が#か空だったらhtmlに
     var hash = href == "#" || href == "" ? 'html' : href;
     //スクロール実行
     scrollToAnker(hash);
     //リンク無効化
     return false;
+  }
   });
 
   // 関数：スムーススクロール
@@ -150,7 +156,6 @@ $(document).ready(function(){
 
 
 }
-
 });
 
 
@@ -201,11 +206,11 @@ $(function () {
 
 // ステップ3.kasikaクラスがinviewしたとき、もしくはcard-reloadのIDをクリックしたときに、お知らせがアクティブ！ 
 $(window).on('load', function() {
-  $('.kasika').on('inview', function(){
+  $('.kasika').one('inview', function(){
     $('.sinchaku-item:first').addClass('active');
   });
 
-    $('#card-reload').one('click', function(){
+  $('#card-reload').one('click', function(){
     $('.sinchaku-item:first').addClass('active');
   });
 });
