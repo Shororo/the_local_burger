@@ -443,6 +443,7 @@ img {
   color: rgba(15, 14, 10, 1);
   background: #ECECEC;
   transition: .4s;
+  margin: 5pt 0pt;
 }
 
 .btn-flat-simple:hover {
