@@ -1,0 +1,492 @@
+/* 全般 */
+#sec1{
+  margin-top: -20rem;
+  padding-top: 20rem;
+}
+#sec2{
+  margin-top: -20rem;
+  padding-top: 20rem;
+}
+#sec3{
+  margin-top: -20rem;
+  padding-top: 20rem;
+}
+#sec4{
+  margin-top: -20rem;
+  padding-top: 20rem;
+}
+#sec5{
+  margin-top: -20rem;
+  padding-top: 20rem;
+}
+#sec6{
+  margin-top: -20rem;
+  padding-top: 20rem;
+}
+#sec7{
+  margin-top: -20rem;
+  padding-top: 20rem;
+}
+
+.top-page{
+  width: 100%;
+  height: 100vh;
+}
+.top-menu{
+  position: relative;
+}
+.top-menu-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+.top-logo{
+  width: 25%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.top-line{
+  width: 90%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#sec0 ul li{
+  margin-top: 2rem;
+}
+.catchcopy{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  width: 50rem;
+  filter: drop-shadow(0.25rem 0.25rem 0.1rem rgba(0, 0, 0, 1));
+}
+
+.hole{
+  width: 100%;
+  height: 30rem;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.sec-picture1{
+  width: 100%;
+  height: 55rem;
+}
+.sec-picture2{
+  width: 100%;
+  height: 50rem;
+}
+.sec-picture3{
+  width: 100%;
+  height: 40rem;
+}
+
+.vh-100{
+  height: 100vh !important;
+}
+
+.menu-design{
+  height: 20rem;
+}
+#sec7 a:hover{
+  color: #bd7b00;
+}
+.mokuzi{
+  width: 100%;
+}
+.mokuzi img{
+  width: 100%;
+}
+.mokuzi-sub{
+  height: 2.5rem;
+}
+.menu-card-picture{
+  height: 25rem;
+  width: 100%;
+}
+.menu-card:hover{
+  filter: brightness(110%) saturate(140%) contrast(80%) grayscale(5%);
+  cursor: pointer;
+  cursor: hand;
+  color: #bd7b00;
+}
+.menu-explanation{
+  display: none;
+}
+.price{
+  color: #ff3b00;
+}
+
+
+/* 商品詳細画面 */
+.shosai{
+  display: none;
+  width: 50rem;
+  height: 70rem;
+  position: fixed;
+  z-index: 999;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  background-color: #efefef;
+  filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.2));
+}
+.shosai-out{
+  /* 詳細画面外を任意の色で覆います */
+  display: none;
+  position: fixed;
+  top:0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 998;
+  /* 任意の色に変更 */
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.shosai .shosai-contents{
+  position: relative;
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.shosai-logo{
+  /* 詳細画面にロゴとか入れたい人用
+  削除してOK */
+  position: absolute;
+  height: 15%;
+  bottom: 5%;
+  right: 5%;
+  opacity: 0.3;
+}
+.shosai .shosai-contents .item-img{
+  width: 100%;
+  height: 60%;
+}
+.contents{
+  height: 40%;
+}
+.scroll{
+  overflow: scroll;
+}
+.assignment-text{
+  display: none;
+}
+.item-title{
+  font-size: 2rem;
+}
+.item-mini{
+  font-size: 1.3rem;
+}
+.item-price{
+  color: #ff3b00;
+  margin-left: 0.3rem;
+}
+.item-text{
+  margin-left: 0.1rem;
+  font-size: 1.3rem;
+}
+/* 商品詳細画面ここまで */
+
+
+/*フッター*/
+.footer-logo{
+  height: 10rem;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.footer-line-box{
+  width: 42%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.footer-line{
+  width: 100%;
+}
+/*フッターここまで*/
+
+
+@media (min-width: 577px){
+  .menu-card-picture {
+    height: 20rem;
+    width: 100%;
+  }
+  .text-small{
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 1050px){
+  .menu-card-picture {
+    height: 30rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px){
+  .shosai {
+    display: none;
+    width: 40rem;
+    height: 60rem;
+    position: fixed;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #efefef;
+    filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.2));
+  }
+}
+
+@media (max-width: 1300px){
+  .top-logo{
+    width: 45%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+
+@media (min-width: 1024px){
+  .none1025{
+    display:none;
+  }
+}
+
+@media (max-width: 1023px){
+  .line-height-576{
+    line-height: 2.5;
+  }
+  .none1024{
+    display: none;
+  }
+  nav li a{
+  line-height: 3.0;
+}
+}
+
+@media (max-width: 768px){
+  .catchcopy{
+    width: 40rem;
+  }
+}
+
+@media (max-width: 767px){
+  .none768{
+    display: none;
+  }
+  .top-menu{
+    display: none;
+  }
+  .title-picture{
+    height: 100vh !important;
+    width: 100vw !important;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+  }
+  .sec-text{
+    padding-top: 3rem;
+    padding-bottom: 3rem !important;
+  }
+  .no-top-3rem{
+    padding-top: 0rem;
+  }
+  .ptb-15{
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+  .pt-25{
+    padding-top: 10rem;
+  }
+  .pt-15{
+    padding-top: 10rem;
+  }
+  .pb-15{
+    padding-bottom: 10rem;
+  }
+  .mt-7{
+    margin-top: 0rem;
+  }
+  .mt--10 {
+    margin-top: 0rem;
+  }
+  .pb-10-576{
+    padding-bottom: 10rem;
+  }
+  .pb-3-567{
+    padding-bottom: 3rem;
+  }
+  .pb-5-576{
+    padding-bottom: 5rem !important;
+  }
+  .mt-4-567{
+    margin-top: 4rem;
+  }
+  .size-576{
+    font-size: 3.5rem;
+  }
+  .hole {
+    width: 100%;
+    height: 15rem;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .none576{
+    display: none;
+  }
+  .block576{
+    display: block;
+  }
+  .top-logo {
+    width: 80rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .myorder-1{
+    order: 1;
+  }
+  .myorder-2{
+    order: 2;
+  }
+  .myorder-3{
+    order: 3;
+  }
+  .myorder-4{
+    order: 4;
+  }
+  .menu-card-picture {
+    height: 25rem;
+    width: 100%;
+  }
+  .mokuzi-sub{
+    height: 2rem;
+  }
+  .sec-picture3 {
+    width: 100%;
+    height: 25rem;
+  }
+  .interval-767{
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .catchcopy{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    width: 30rem;
+    filter: drop-shadow(0.25rem 0.25rem 0.1rem rgba(0, 0, 0, 1));
+  }
+}
+
+@media (max-width: 576px){
+.none-mobile{
+  display: none;
+}
+.block-mobile{
+  display: block;
+}
+ #sec12{
+  margin-top: -10rem;
+  padding-top: 10rem;
+}
+#sec23{
+  margin-top: -10rem;
+  padding-top: 10rem;
+}
+#sec34{
+  margin-top: -10rem;
+  padding-top: 10rem;
+}
+#sec4{
+  margin-top: -10rem;
+  padding-top: 10rem;
+}
+#sec56{
+  margin-top: -10rem;
+  padding-top: 10rem;
+}
+#sec6{
+  margin-top: -10rem;
+  padding-top: 10rem;
+}
+#sec7{
+  margin-top: -10rem;
+  padding-top: 10rem;
+}
+
+p{
+  font-size: 1.4rem;
+}
+h1{
+  font-size: 1.8rem;
+}
+.item-title{
+  font-size: 1.8rem;
+}
+.soda-height{
+  height: 15rem;
+}
+.sec-picture1 {
+  width: 100%;
+  height: 27rem;
+}
+.sec-picture2 {
+  width: 100%;
+  height: 27rem;
+}
+.mokuzi-sub{
+  height: 1.4rem;
+}
+.footer-line-box {
+  width: 80%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.shosai {
+  display: none;
+  width: 30rem;
+  height: 50rem;
+  position: fixed;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #efefef;
+  filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.2));
+}
+
+.shosai .shosai-contents .item-img {
+  width: 100%;
+  height: 50%;
+}
+.contents {
+  height: 50%;
+}
+
+.sec-picture3 {
+    width: 100%;
+    height: 20rem;
+}
+}
+
+@media (max-height: 900px) and (min-width: 768px){
+#sec0 ul li {
+    margin-top: 1rem;
+}
+.top-logo {
+    width: 25%;
+}
+}
+/* 全般ここまで 
