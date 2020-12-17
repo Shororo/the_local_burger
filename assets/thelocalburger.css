@@ -480,4 +480,13 @@ h1{
     height: 20rem;
 }
 }
+
+@media (max-height: 900px) and (min-width: 768px){
+#sec0 ul li {
+    margin-top: 1rem;
+}
+.top-logo {
+    width: 25%;
+}
+}
 /* 全般ここまで 
